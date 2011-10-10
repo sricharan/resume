@@ -1,0 +1,65 @@
+!!!
+%html(xmlns="http://www.w3.org/1999/xhtml" xmlns:og = "http://ogp.me/ns#"  xmlns:fb ="http://www.facebook.com/2008/fbml")
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    - # This can be further customized here: http://developers.facebook.com/docs/reference/plugins/like/ -Anthony
+    %meta{:content => "IIT Kharagpur Model United Nations Conference", :property => "og:title"}/
+    %meta{:content => "non_profit", :property => "og:type"}/
+    %meta{:content => "IITKGPMUN", :property => "og:site_name"}/
+    %meta{:content => "http://profile.ak.fbcdn.net/hprofile-ak-snc4/276613_213118772078257_6776620_n.jpg", :property => "og:image"}/
+    %link{ :rel => "shortcut icon", :href => "/images/mun_logo_small.png", :type => "image/x-icon"}/
+
+    %title
+      = "IIT KGP MUN" 
+    = stylesheet_link_tag  "style", "navigation_bar", "slideshow"
+    = javascript_include_tag "jquery", "application","rails", "navigation", "jquery.countdown.pack"
+    = csrf_meta_tag
+
+
+  %body
+    
+      .fblike
+        =#%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+        =#%fb:like{:layout => "button_count", :show_faces => "false", :width => "450", :style => "left:1000px;"}
+    #page
+      #page-bgtop
+        #content
+          = yield
+        #sidebar
+          %h3   Countdown to IITKGPMUN   
+          #countdown 
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %ul
+            %li 
+              %h2 Announcements 
+              %ul{:style => "margin:10px;"}
+                %li 
+                  Executive board applications are up.    
+                  = link_to "Click Here!" , "#"
+                %li
+                  International Press applications will be open soon. Please keep checking.    
+                %li 
+                  Delegate applications will be open soon. Please keep checking.    
+          %ul
+            %li 
+              %h2 Get Social
+              %ul{:style => "margin:10px;"}
+                %li 
+                  Keep in touch with the MUN   
+                  = link_to "in the facebook group", "http://www.facebook.com/groups/iitkgpmun/", :target => "_blank"
+                %li 
+                  = link_to "Facebook Page", "http://www.facebook.com/iitkgpmun", :target => "_blank"
+        .clr
+      .clr
+    .clr
+    .clr
+    #footer
+       
+      Copyright © - IITKGPMUN 2012 | IIT Kharagpur Model UN Conference 2012 | Site developed by Sricharan Sunder | Logo designed by Avik Dey
+:javascript
+
