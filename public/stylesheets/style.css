@@ -21,11 +21,15 @@ h1 { font-size: 44px; }
 h2 { font-size: 18px; }
 
 h3 {
- margin-left: 10px;
- font-weight: bold;
- color: #549900;
+ 
+ font-weight: none; 
+ 
 
  }
+
+h4 {
+ font-weight: bold;
+ font-size: 18px; }
 
 p, ul, ol {
 	margin-top: 0;
@@ -698,5 +702,5 @@ background : #D8D8D8; }
 
 
 .picture {
- float:left;} 
+ float:right;} 
 
